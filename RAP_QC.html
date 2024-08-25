@@ -77,7 +77,7 @@ def transform_name(name):
 
 pdf_qced.columns = [transform_name(col) for col in pdf_qced.columns]
 
-pdf_qced.to_csv('QC_data.csv', na_rep='NaN', index=False, quoting=3)
+pdf_qced.to_csv('QC_data.csv', na_rep='Na', index=False, quoting=3)
 
 %%bash
 dx upload QC_data.csv -p --path /QC_data/ --brief
